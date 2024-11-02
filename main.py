@@ -55,3 +55,33 @@ print("Rectangle area (length=4, width=6):", area_calculator.rectangle_area(4, 6
 print("Square area (side=3):", area_calculator.square_area(3))
 print("Rhombus area (diagonal1=4, diagonal2=6):", area_calculator.rhombus_area(4, 6))
 print("Total area calculations:", AreaCalculator.get_calculation_count())
+
+#task3
+class Statistics:
+
+    @staticmethod
+    def maximum(a, b, c, d):
+        return max(a, b, c, d)
+
+    @staticmethod
+    def minimum(a, b, c, d):
+        return min(a, b, c, d)
+
+    @staticmethod
+    def average(a, b, c, d):
+        return (a + b + c + d) / 4
+
+    @staticmethod
+    def factorial(n):
+        if n < 0:
+            return "Factorial is not defined for negative numbers."
+        if n == 0 or n == 1:
+            return 1
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+print("Maximum of (3, 5, 2, 8):", Statistics.maximum(3, 5, 2, 8))
+print("Minimum of (3, 5, 2, 8):", Statistics.minimum(3, 5, 2, 8))
+print("Average of (3, 5, 2, 8):", Statistics.average(3, 5, 2, 8))
+print("Factorial of 5:", Statistics.factorial(5))
